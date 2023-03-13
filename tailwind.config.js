@@ -8,7 +8,11 @@ module.exports = {
     fontFamily: {
       poppins: ['Poppins'],
     },
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 22s linear infinite',
+      }
+    },
   },
   plugins: [],
 }

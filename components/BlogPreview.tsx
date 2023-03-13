@@ -14,7 +14,7 @@ const BlogPreview: React.FC<BlogPost> = (props) => {
         {tags.map((tag, idx) => {
           return (
             <p
-              className="bg-sky-600 px-2 mt-2 font-semibold rounded-xl text-zinc-800"
+              className=" bg-sky-600 px-2 mt-2 font-semibold rounded-xl text-zinc-800"
               key={idx}
             >
               {' '}

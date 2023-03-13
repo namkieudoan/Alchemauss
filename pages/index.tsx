@@ -23,24 +23,46 @@ const Home: NextPage = ({
       setSelectedIdx(selectedIdx.filter((id) => id !== idx))
       setFilterWord(filterWord.filter((filter) => filter !== tag.innerText))
     } else {
-      setSelectedIdx([...selectedIdx, idx])
-      setFilterWord([...filterWord, tag.innerText])
+      setSelectedIdx([idx])
+      setFilterWord([tag.innerText])
     }
   }
 
   return (
     <main className="layout">
-      <title> Home Page </title>
+      <title> NgonRight</title>
       <section>
-        <div className="mt-3 text-center">
-          <h1 className="text-[3rem]"> Welcome to DevBlog </h1>
-          <p>
-            A full-stack blog made with Next.js, TailwindCSS, Github GraphQL
-          </p>
-        </div>
+        <header className="mt-4 flex justify-center items-center flex-col h-screen ">
+          <div className='section-image max w-48 h-48 relative flex justify-center items-center'>
+            <div className='rounded-full text-8xl'>👨‍💻</div>
+            <span className='p-24 rounded-full border-4 border-dashed border-sky-400 animate-spin-slow absolute'></span>
+          </div>
+          <div className='info mt-9'>
+            <h1 className="text-center text-[2rem] font-medium"> Kieu Doan Nam </h1>
+            <p className="text-center">
+              Developer on Weekdays, Avid Writer on Weekends
+            </p>
+          </div>
+          <h3 className='mt-6 mb-6 font-medium text-xl'>Software Alchemist</h3>
+          <blockquote className='m-6 p-6 w-[calc(100%-2rem)] relative border-2 '> 
+            <p>
+              You are the only person you have to live with for the rest of your life
+            </p>
+            <small className='p-2 m-2 border-2 absolute -right-6 bg-slate-800 italic font-semibold'> - Anonymous</small>
+          </blockquote>
+        </header>
       </section>
       <section className="flex flex-col items-center text-[1.15rem] mt-12">
-        <div className="flex gap-3 mb-12">
+        <div className="flex gap-3 mb-12 ">
+          <button 
+            className='text-neutral-600 hover:text-white transition-all duration-300'
+            onClick = {()=>{
+              setSelectedIdx([]);
+              setFilterWord([])
+            }}
+          >
+            Home
+          </button>
           {tags.map((tag: string, idx: number) => {
             return (
               <button
@@ -99,3 +121,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
     },
   }
 }
+
