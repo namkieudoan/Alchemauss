@@ -10,12 +10,12 @@ const BlogPost: NextPage = ({
   const {author, bodyHTML, createdAt, title} = blogData
   return (
     <section className="layout">
-      <div className="max-w-[50%]">
+      <div className="max-w-[680px] m-4 p-4 w-full">
         <h1 className="text-center my-10 text-[2rem] font-bold"> {title} </h1>
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mb-4 ">
           <BlogHeader createdAt={createdAt} author={author} />
         </div>
-        <div className={`${detail.html} flex flex-col`}>{parse(bodyHTML)}</div>
+        <div className={`${detail.html} flex flex-col justify-center`}>{parse(bodyHTML)}</div>
       </div>
     </section>
   )
