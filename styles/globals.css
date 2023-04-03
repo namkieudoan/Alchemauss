@@ -6,7 +6,7 @@
 
 @layer components {
   .layout {
-    @apply w-screen h-screen overflow-auto flex flex-row items-center bg-zinc-800 text-neutral-300 font-RobotoSerif ;
+    @apply w-screen h-screen overflow-auto flex flex-col items-center bg-zinc-800 text-neutral-300 font-RobotoSerif ;
   }
   .section-info {
     @apply w-1/4 ;
